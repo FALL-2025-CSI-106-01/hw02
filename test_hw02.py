@@ -12,8 +12,6 @@ def test_1_1_read_two_ints(capsys, monkeypatch):
     with monkeypatch.context() as m:
         m.setattr('builtins.input', lambda _: next(user_inputs))
 
-        #   import hw01_main  # Import the module here
-
         ret1a, ret1b = hw02_main.read_two_ints()
         captured = capsys.readouterr()
 
@@ -28,8 +26,6 @@ def test_1_2_read_two_ints(capsys, monkeypatch):
     # monkeypatch.setattr('builtins.input', lambda _: next(inputs))
     with monkeypatch.context() as m:
         m.setattr('builtins.input', lambda _: next(user_inputs))
-
-        #   import hw01_main  # Import the module here
 
         ret1a, ret1b = hw02_main.read_two_ints()
         captured = capsys.readouterr()
@@ -46,8 +42,6 @@ def test_2_1_compute_multadd(capsys, monkeypatch):
     with monkeypatch.context() as m:
         m.setattr('builtins.input', lambda _: next(user_inputs))
 
-        #   import hw01_main  # Import the module here
-
         ret2 = hw02_main.compute_multadd(10, 15)
         captured = capsys.readouterr()
 
@@ -63,8 +57,6 @@ def test_2_2_compute_multadd(capsys, monkeypatch):
     # monkeypatch.setattr('builtins.input', lambda _: next(inputs))
     with monkeypatch.context() as m:
         m.setattr('builtins.input', lambda _: next(user_inputs))
-
-        #   import hw01_main  # Import the module here
 
         ret2 = hw02_main.compute_multadd(8, 2)
         captured = capsys.readouterr()
